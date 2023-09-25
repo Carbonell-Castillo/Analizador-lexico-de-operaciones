@@ -98,12 +98,12 @@ class MainWindow:
 
     def report(self):
         try:
-            messagebox.showinfo("Generado", "Se generó correctamente el archivo json")
+            messagebox.showinfo("Generado", "Se generó correctamente el diagrama")
             content_json = self.widget.get(1.0, tk.END)
             arbol= generarArbol(content_json)
             arbol.generarGrafica()
         except:
-            messagebox.showinfo("Error", "No se ha ingresado ningún archivo")
+            messagebox.showinfo("Error", "No se ha podido generar el diagrama")
 
 if __name__ == "__main__":
     root = tk.Tk()
